@@ -1,0 +1,43 @@
+{
+  "name": "auth-playground",
+  "version": "0.0.0",
+  "description": "Raw Auth Techniques",
+  "private": true,
+  "scripts": {
+    "fmt": "prettier $* --single-quote --trailing-comma es5 --write",
+    "precommit": "lint-staged",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:types": "tsc -noEmit -p .",
+    "start:dev": "node --loader ts-node/esm src/index.ts",
+    "start": "tsc && node dist/index.js"
+  },
+  "license": "UNLICENSED",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/node": "^7.25.0",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.5.5",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-jest-resolver": "^2.0.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0"
+  },
+  "dependencies": {
+  }
+}

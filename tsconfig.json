@@ -1,0 +1,20 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "lib": ["es5", "es6"],
+    "module": "commonjs",
+    "target": "ESNext",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "ESNext",
+      "experimentalSpecifierResolution": "node",
+      "esModuleInterop": true
+    }
+  }
+}
